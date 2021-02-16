@@ -251,7 +251,7 @@ a:active {
         text-transform: translate(-50%, -50%);
         height: 500px;
         justify-content: space-around;
-        margin-top: 100px;
+        margin-top: 10px;
     }
 
     .tooltip {
