@@ -204,15 +204,18 @@ function sceneMainBoxes(counter){
 };
 
 function highlightMinor(){
-	$(`.minor`).addClass('highlight-minor')
+	$('.tooltip').removeClass('highlight');
+	$(`.minor`).addClass('highlight')
 }
 
 function highlightRules(){
-	$(`.rules`).addClass('highlight-rules')
+	$('.tooltip').removeClass('highlight');
+	$(`.rules`).addClass('highlight')
 }
 
 function highlightSerious(){
-	$(`.serious`).addClass('highlight-serious')
+	$('.tooltip').removeClass('highlight');
+	$(`.serious`).addClass('highlight')
 }
 
 function scene2(counter){ 				//Force
@@ -326,7 +329,7 @@ function scene9(counter){
 
 	if (wrote_minor===false){
 		writeData(commandDiscipline_data, counter, "command");
-		wrote_command = true;
+		wrote_minor = true;
 	} else if (wrote_minor===true){
 		//pass
 	}
@@ -360,7 +363,6 @@ watchMainBoxes.inView(()=>{
 
 const watchHighlight1 = new Watch(".scroll-spy-highlight1");
 watchHighlight1.inView(()=>{
-	counter = 2
 	highlightSerious();
 });
 

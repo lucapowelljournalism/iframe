@@ -42,31 +42,31 @@ a:active {
     overflow: hidden;
 }
 
-@media only screen and (min-width: 600px) {
+.container {
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+}
 
-    .container {
-        margin: 0 auto;
-        max-width: 1000px;
-        overflow: hidden;
-    }
-    .header-background{
-        width: 100vw;
-        height: 640px;
-        display: flex;
-    }
+.header-background{
+    height: 640px;
+    display: flex;
+    width: 100vw;
+}
 
-    .title{
-        width: 100%;
-    }
+.title{
+    width: 100%;
+}
 
-    .title-text {
-        position: absolute;
-        font-size: 3em;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
+.title-text {
+    position: absolute;
+    font-size: 3em;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
     .title-text h1{
         text-align: center;
         padding-top: 10%;
@@ -97,8 +97,6 @@ a:active {
         border-radius: 2%;
         width: 92px;
         height: 40px;
-        margin: 0 auto;
-        margin-right: 2px;
     }
 
     #wnyc div{
@@ -140,13 +138,13 @@ a:active {
 
     /***** *****/
     #scrolltobegin{
-        position: relative;
-        top: 68%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        left: 28%;
+        position: absolute;
+        width: 92px;
         font-size:.5em;
         font-style: italic;
+        top: 75%;
+        left: 46%;
+
     }
 
     /********** Normal text paragraphs **********/
@@ -250,7 +248,6 @@ a:active {
         text-align: center;
         text-transform: translate(-50%, -50%);
         height: 500px;
-        justify-content: space-around;
         margin-top: 10px;
     }
 
@@ -268,6 +265,7 @@ a:active {
     .tooltip {
         position: relative;
         display: inline-block;
+        transition: background-color 0.4s ease-in-out;
     }
 
     #graphic-main-boxes .tooltip{
@@ -275,6 +273,10 @@ a:active {
         margin-top:1px;
         margin-left: 2px;
         margin-right: 2px;
+    }
+
+    .highlight{
+        background-color: white; 
     }
 
     .highlight-minor{
@@ -288,42 +290,10 @@ a:active {
     .highlight-serious{
         background-color:slategray;
     }
-    /*
-    .breakdown-wrapper{
-        height:100%;
-        display:none;
 
+    .findings-by-category{
+        margin: 5%;
     }
-
-    .breakdown-div{
-        font-weight: bolder;
-        text-transform: uppercase;
-        height: 100%;
-        width:32%;
-        display: inline-block;
-        background-color: rgb(123, 189, 206);
-        border-radius: 2%;
-        vertical-align: top;
-        position: relative;
-    }
-
-    .breakdown-header{
-        margin-top: 10px;
-        margin-bottom:20px;
-    }
-
-    .bk {
-        position: absolute;
-        bottom: 5%;
-        margin-left:2%;
-        margin-right:2%
-    }
-
-    .breakdown-div div.tooltip{
-        padding: 8px;
-        vertical-align: text-bottom;
-    }
-    */
 
     .category {
         height: 45px;
@@ -341,7 +311,7 @@ a:active {
         width: 80%;
         margin-left: 20px;
     }
-
+    /*
     #EF .tooltip{
         background-color:rgb(220, 5, 50);
     }
@@ -365,8 +335,10 @@ a:active {
     #offduty .tooltip{
         background-color: rgb(220, 150, 200);
     }
+    */
     #command .tooltip{
-        background-color: rgb(220, 175, 225);
+        /*background-color: rgb(220, 175, 225);*/
+        padding: 2px;
     }
     
     .tooltip .tooltiptext {
@@ -421,7 +393,7 @@ a:active {
         background-color: lightslategray;  /*These are styles for the font in the gray scrolling boxes*/
         opacity: .98;
         border-radius: 2%;
-        max-height: 50vh;
+        max-height: 70vh;
     }
 
     .scroll-spy div p{
@@ -437,7 +409,6 @@ a:active {
     body > div.scroll-spy > div.scroll-spy-explainer{
         margin-left: 54%;
         width: 277px;
-        max-height: 50vh;
     }
 
     #caption10{
@@ -473,96 +444,6 @@ a:active {
         color: pink;
 
     }
-
-    /********** Database Styles *******/
-
-    .table-title{
-        margin-top: 5%;
-        margin-bottom: 5%;
-        text-align: center;
-        font-size: 1.5em;
-    }
-    .database {
-        background-color: white;
-        border-radius: .2%;
-        margin-bottom: 20%;
-    }
-
-    .react-table {
-        color: black;
-        overflow: scroll;
-        height: 500px;
-        font-size: 11px;
-    }
-
-    .react-table thead{
-        background-color: lightgray;
-        text-align: center;
-    }
-
-    .react-table tr{
-        max-height: 20px;
-    }
-
-    .react-table form {
-        text-align: center;
-        margin: 5%;
-    }
-    .react-table form input {
-        width: 150px;
-    }
-
-    .react-table table {
-        padding: 5px;
-    }
-    
-}
-
-
-
-
-/********** Database Styles 
-
-.table-title{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    text-align: center;
-    font-size: 1.2em;
-}
-.database {
-    background-color: white;
-    border-radius: .2%;
-    margin: 10%;
-}
-
-.react-table {
-    color: black;
-    overflow: scroll;
-    height: 500px;
-    font-size: 11px;
-}
-
-.react-table thead{
-    background-color: lightgray;
-    text-align: center;
-}
-
-.react-table tr{
-    max-height: 20px;
-}
-
-.react-table form {
-    text-align: center;
-    margin: 5%;
-}
-.react-table form input {
-    width: 150px;
-}
-
-.react-table table {
-    padding: 5px;
-}*
-
 
 
 
