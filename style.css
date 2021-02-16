@@ -139,11 +139,11 @@ a:active {
     /***** *****/
     #scrolltobegin{
         position: absolute;
-        width: 92px;
+        width: 102px;
         font-size:.5em;
         font-style: italic;
         top: 75%;
-        left: 46%;
+        left: 45%;
 
     }
 
@@ -274,6 +274,11 @@ a:active {
         margin-left: 2px;
         margin-right: 2px;
     }
+    #graphic-main-boxes p{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
 
     .highlight{
         background-color: white; 
@@ -293,8 +298,20 @@ a:active {
 
     .findings-by-category{
         margin: 5%;
+        position: relative;
+    }
+    .findings{
+        transition: max-width .5s ease-in-out;
+    }
+    .results{
+        margin-top: 30px;
+        font-size: 1.4em;
     }
 
+    .results .tooltip{
+        background-color: white;
+        padding: 8px;
+    }
     .category {
         height: 45px;
         width: 100%;
@@ -336,9 +353,7 @@ a:active {
         background-color: rgb(220, 150, 200);
     }
     */
-    #command .tooltip{
-        /*background-color: rgb(220, 175, 225);*/
-        padding: 2px;
+    .punishment-box{
     }
     
     .tooltip .tooltiptext {
@@ -411,7 +426,7 @@ a:active {
         width: 277px;
     }
 
-    #caption10{
+    #caption9{
         margin-bottom: 300px;
     }
 

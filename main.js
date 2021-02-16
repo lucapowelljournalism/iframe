@@ -83,9 +83,8 @@ async function writeGroups(){
 function hideIntro(){
 	hideElement('scrolltobegin');
 	hideElement('title-hero');
-	hideElement('caption-intro');
 };
-
+/*
 function moveBullet(counter){
 	let bullets = document.getElementsByClassName('bullet');
 	for (var i = 0; i < bullets.length; i++) {
@@ -96,7 +95,7 @@ function moveBullet(counter){
 
 	bullets[counter].style.color = 'crimson'; //color the active bullet	removeElement("dwi-category")
 
-};
+};*/
 
 function hideElement(id){
 	document.getElementById(id).style.display = 'none';
@@ -123,7 +122,6 @@ async function writeData (data, id,location) {
 
 function resetToBeginning(counter){
 	if (counter === 0){
-		moveBullet(counter);
 		showElement('scrolltobegin');
 		showElement('title-hero');
 		showElement('wnyc')
@@ -200,7 +198,6 @@ function sceneMainBoxes(counter){
 		//pass;
 	};
 	
-	moveBullet(counter);
 };
 
 function highlightMinor(){
@@ -214,6 +211,7 @@ function highlightRules(){
 }
 
 function highlightSerious(){
+	showElement("graphic-main-boxes")
 	$('.tooltip').removeClass('highlight');
 	$(`.serious`).addClass('highlight')
 }
@@ -231,8 +229,6 @@ function scene2(counter){ 				//Force
 	} else if (wrote_force === true){
 		//pass
 	};
-
-	moveBullet(counter);
 	
 }
 
@@ -246,7 +242,6 @@ function scene3(counter){      					//DWI
 		//pass
 	};
 
-	moveBullet(counter)
 	hideElement("lying-category");
 
 
@@ -261,8 +256,6 @@ function scene4(counter){
 		//pass
 	};
 	hideElement("firearm-category");
-	moveBullet(counter);
-
 
 }
 
@@ -275,7 +268,6 @@ function scene5(counter){
 	} else if (wrote_firearm === true){
 		//pass
 	}
-	moveBullet(counter);
 	hideElement("domestic-category");
 
 }
@@ -290,7 +282,6 @@ function scene6(counter){
 		//pass;
 	}
 
-	moveBullet(counter);
 	hideElement("offduty-category");
 
 }
@@ -306,11 +297,12 @@ function scene7(counter){
 	}
 
 	hideElement("FADO-category");
-	moveBullet(counter);
 }
 
 function scene8(counter){
 	showFlexElement("FADO-category");
+	document.querySelector('.findings').style.opacity = "1";
+
 
 	if (wrote_fado === false){
 		writeData(fado_data, counter, "FADO");
@@ -318,23 +310,21 @@ function scene8(counter){
 	} else if ( wrote_fado===true){
 		//pass
 	}
-
-	moveBullet(counter);
-	hideElement("command-category")
+	hideElement("punishment")
 
 }
 
 function scene9(counter){
-	showFlexElement("command-category");
+	showElement("punishment");
+	showElement("results")
+	document.querySelector('.findings').style.opacity = ".5";
 
 	if (wrote_minor===false){
-		writeData(commandDiscipline_data, counter, "command");
+		writeData(punishment_data, counter, "punishment");
 		wrote_minor = true;
 	} else if (wrote_minor===true){
 		//pass
 	}
-
-	moveBullet(counter);
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -381,53 +371,45 @@ watchHighlight3.inView(()=>{
 
 const watch2 = new Watch(".scroll-spy-2");
 watch2.inView(() => {
-	counter = 3
 	scene2(counter);
 });
 
 const watch3 = new Watch(".scroll-spy-3");
 watch3.inView(() => {
-	counter = 4
 	scene3(counter);
 });
 
 const watch4 = new Watch(".scroll-spy-4");
 watch4.inView(() => {
-	counter = 5;
 	scene4(counter);
 });
 
 const watch5 = new Watch(".scroll-spy-5");
 
 watch5.inView(() => {
-	counter = 6;
 	scene5(counter);
 });
 
 const watch6 = new Watch(".scroll-spy-6");
 
 watch6.inView(() => {
-	counter = 7;
 	scene6(counter);
 });
 
 const watch7 = new Watch(".scroll-spy-7");
 
 watch7.inView(() => {
-	counter = 8;
 	scene7(counter);
 });
 
 const watch8 = new Watch(".scroll-spy-8");
 
 watch8.inView(() => {
-	counter = 9;
 	scene8(counter);
 });
 
 const watch9 = new Watch(".scroll-spy-9");
 watch9.inView(() => {
-	counter = 10;
 	scene9(counter);
 });
 
