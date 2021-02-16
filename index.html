@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>The Staten Island Police Files</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="data.json"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+
+    <!--<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+  </head>
+
+  <body>
+    
+    <div class="wrapper">
+      <div id="graphic" class="container graphic boxes fade-in">
+        <h1 style="display:none;" id="title-hero" class="title-text">The Staten Island Police Files</h1>
+
+        <div style="display: none;" class="wnyc" id="wnyc">
+          <div class="wnyc-0" id="wnyc-0"></div>
+          <div class="wnyc-1" id="wnyc-1"></div>
+          <div class="wnyc-2" id="wnyc-2"></div>
+          <div class="wnyc-3" id="wnyc-3"></div>
+          <div class="wnyc-4" id="wnyc-4"></div>
+        </div>
+
+        <div class="explainer" style="display:none;" id="explainer">
+          <img class="police" id="police" src="img/001-police-station.svg"/>
+          <img id="arrow1" src="img/004-down-arrow.svg">
+          <img id="lawyer" src="img/002-lawyer.svg">
+          <img id="arrow2" src="img/003-right.svg">
+          <img id="lawyer2" src="img/002-lawyer.svg">
+          <img id="wnyc-explainer" src="img/Screen Shot 2021-02-14 at 12.10.46 PM.png">
+          <img id="arrow3" src="img/005-up-arrow.svg">
+        </div>
+
+
+        <div id="graphic-main-boxes" style="display:none;">
+          <p>Each box represents one misconduct finding.</p>
+        </div>
+
+        <!--div id="breakdown-wrapper" class="breakdown-wrapper">
+          <div class="breakdown-div"><div class="breakdown-header">Minor Misconduct</div><div class="bk" id="bk1"></div></div>
+          <div class="breakdown-div"><div class="breakdown-header">'Rules Violations'</div><div class="bk" id="bk2"></div></div>
+          <div class="breakdown-div"><div class="breakdown-header">Most Seriously Penalized Misconduct</div><div class="bk" id="bk3"></div> </div>
+        </div-->
+        
+        <div id="findings-by-category">
+          <div class="category" style="display:none;" id="ef-category">
+            <div class="category-header">
+              <span>Excessive Force:</span>
+            </div>
+              <div class='category-data' id="EF"></div>
+            </div>
+          <div class="category" style="display:none;" id="dwi-category"><div class="category-header"><span>DWI:</span></div><div class='category-data' id="dwi"></div></div>
+          <div class="category" style="display:none;" id="lying-category"><div class="category-header"><span>False Statements:</span></div><div class="category-data" id="lying"></div></div>
+          <div class="category" style="display:none;" id="firearm-category"><div class="category-header"><span>Firearm Misconduct:</span></div><div class="category-data" id="firearm"></div></div>
+          <div class="category" style="display:none;" id="domestic-category"><div class="category-header"><span>Domestic Violence:</span></div><div class="category-data" id="domestic"></div></div>
+          <div class="category" style="display:none;" id="offduty-category"><div class="category-header"><span>Off-Duty Misconduct:</span></div><div class="category-data" id="offduty"></div></div>
+          <div class="category" style="display:none;" id="FADO-category"><div class="category-header"><span>FADO:</span></div><div class="category-data" id="FADO"></div></div>
+          <div class="category" style="display:none;" id="command-category"><div class="category-header"><span>All Other Minor Violations:</span></div><div class="category-data" id="command"></div></div>
+        </div>
+
+
+      </div>
+
+      <div class="key container">
+        <p class="bullet" style="color:pink;">.</p>
+        <p class="bullet">.</p>
+        <p class="bullet">.</p>
+        <p class="bullet">.</p>
+        <p class="bullet">.</p>
+        <p class="bullet">.</p>
+        <p class="bullet">.</p>
+        <p class="bullet">.</p>
+        <p class="bullet">.</p>
+        <p class="bullet">.</p>
+        <p class="bullet">.</p>
+
+      </div>
+
+      <div id="caption-intro" class="caption container" style="display:none;" >
+        <p>In 2020, WNYC won a FOIL request granting it access to thousands of documents written by district attorney's
+        regarding police officers. Within the documents, which are letters, lie hundreds of NYPD misconduct allegations pulled from the department's CPI (Central Personnel Index).
+        </p>
+      </div>
+
+      <div style="display: none;" id="scrolltobegin" class="center content container">
+        <h1>Scroll to begin</h1>
+      </div>
+      
+    </div>
+
+    <div class="scroll-spy">
+      <div class="scroll-text scroll-spy-reset"><p id="caption0"></p></div>
+      <div class="scroll-spy-intro"><p id="captionintro">Following a Freedom of Information appeal by WNYC/Gothamist, the Staten Island District Attorney released thousands of letters containing disclosures about police witnesses. </p></div>
+      <div class="scroll-spy-explainer"><p id="scroll-spy-explainer">The letters are written by attorneys at the District Attorney's office in preparation for trials. These attorneys are, by law, compelled to identify personnel information regarding police witnesses to defense attorneys.<br><br> As a result, the letters contain lawsuits, CCRB complaints and internal misconduct findings held within the NYPD's Central Personnel Index. The latter have yet to be disclosed as 50-a is litigated in court.</p></div>
+      <div class="scroll-spy-1"><p>The letters document over 800 misconduct findings that have not been made public before. <br><br>Now, Gothamist/WNYC is making a slice of those misconduct findings available to the public.</p></div>
+      <div><p>Gothamist/WNYC broke the findings into three groups based on penalties that the misconduct would receive under the NYPD's own <a style="color:blue; cursor: pointer;"href="https://www1.nyc.gov/assets/home/downloads/pdf/office-of-the-mayor/2021/NYPD-Discipline-Matrix-Effective-01-15-2021.pdf">punishment guidelines.</a></p></div>
+      
+      <div class="scroll-spy-highlight1"><p id="scroll-spy-highlight1">The first group is of misconduct findings that the department punishes most seriously. It includes lying, driving under the influence and off-duty misconduct.<br><br>One officer was suspended for violations in all three categories, only to earn a promotion to Sergeant two years after.</p></div>
+      
+      <div class="scroll-spy-highlight2"><p id="scroll-spy-highlight2">The second, intermediary group is for Departmental Rules Violations, a broad category that includes violations such as incidents of racial profiling, or failure to activate a body-worn camera. Discipline for these offenses is sometimes sent up to the Internal Affairs Bureau (IAB) and sometimes kicked down to an officer's supervisor.<br></br>The Staten Island Files identify 8 instances in which officers failed to activate body-worn cameras. At most, they received a minor punishment known as a Schedule A Command Discipline, in some cases after multiple offenses.</p></div>
+      
+      <div class="scroll-spy-highlight3"><p id="scroll-spy-highlight3">The last were for minor violations that get handled within a police precinct by a supervising officer. These can include anything from misusing a department computer to bad paperwork.</a></p></div>      
+      <div class="scroll-spy-2"><p id="caption2">Excessive Force</p></div>
+      <div class="scroll-spy-3"><p id="caption3">DWI.</p></div>
+      <div class="scroll-spy-4"><p id="caption4">Lying</p></div>
+      <div class="scroll-spy-5"><p id="caption5">Firearms</p></div>
+      <div class="scroll-spy-6"><p id="caption6">Domestic Violence</p></div>
+      <div class="scroll-spy-7"><p id="caption7">Off-Duty</p></div>
+      <div class="scroll-spy-8"><p id="caption8">FADO</p></div>
+      <div class="scroll-spy-9"><p id="caption9">Minor Violations</p></div>
+      <div class="scroll-spy-10"><p id="caption10">This is all just a small window into the broader misconduct findings that will be available to the public when Civil Rights Law 50-a is fully repealed in court.</p></div>
+
+      <!--div class="scroll-spy-10 last-caption"><p id="caption8">The findings give a slim window into the breadth of misconduct findings that will become available once 50-a is repealed in court.</p></div-->
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://watchjs.tcm.io/js/watch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="main.js"></script>
+
+
+    <!--script src="database-main/js/table.js" defer></script-->
+
+  </body>
+
+</html>

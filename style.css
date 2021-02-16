@@ -1,0 +1,719 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    font-size: 15px/1.5 Arial;
+    background-color:white;
+    color: black;
+    overflow-x:hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: lightskyblue;
+}
+
+a:active {
+    text-decoration: underline;
+    color: white;
+}
+
+
+@media only screen and (min-width: 300px) {
+ .container {
+    margin: 0 auto;
+    max-width: 400px;
+    overflow: hidden;
+}
+    
+.header-background{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+    img {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .title h1 {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .content {
+        max-width: 350px;
+    }
+
+    .content p{
+        margin-top: 10%;
+    }
+
+    #first-grafs {
+        margin-bottom: 10%;
+    }
+    .mobile-explainer {
+        display:block;
+        text-align: center;
+    }
+
+    .desktop-explainer{
+        display: none;
+        text-align: center;
+
+    }
+
+    .graphic {
+        background-color: white;
+        width: 85%;
+        min-height: 450px;
+        max-height: 1150px;
+        vertical-align: middle;
+        text-transform: translate(-50%, -50%);
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+
+.tooltip {
+    padding: 7.5px;
+    height: 1px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    margin-top: 2.5px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: black;
+}
+
+    .fade-in {
+        opacity: 1;
+    }
+
+    .graphic .tooltip:hover {
+        background-color: lightskyblue;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .caption {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+    
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+    
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .tooltip .tooltiptext::after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .container {
+        margin: 0 auto;
+        max-width: 1000px;
+        overflow: hidden;
+    }
+    .header-background{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+
+    .title{
+        width: 100%;
+    }
+
+    .title-text {
+        position: absolute;
+        font-size: 3em;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .title-text h1{
+        text-align: center;
+        padding-top: 10%;
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    img {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    .title h1 {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    /********** WNYC Display **************/
+
+    .wnyc{
+        position: absolute;
+        top: 60%;
+        left: 46%;
+        background-color: #DE1E3D;
+        border-radius: 2%;
+        width: 92px;
+        height: 40px;
+        margin: 0 auto;
+        margin-right: 2px;
+    }
+
+    #wnyc div{
+        transition: opacity 0.5s ease-in-out;
+        display: inline-block;
+        width: 13%;
+        margin-top: 10px;
+    }
+
+    .wnyc-0{
+        background-color: #DE1E3D ;
+        height: 0px;
+        opacity: 0;
+    }
+
+    .wnyc-1{
+        background-color: white;;
+        height: 5px;
+        opacity: 0;
+    }
+
+    .wnyc-2{
+        background-color: white;;
+        height: 20px;
+        opacity: 0;
+    }
+
+    .wnyc-3{
+        background-color: white;;
+        height: 18px;
+        opacity: 0;
+    }
+
+    .wnyc-4{
+        background-color: white;;
+        height: 22px;
+        opacity: 0;
+    }
+
+
+    /***** *****/
+    #scrolltobegin{
+        font-size:.5em;
+        font-style: italic;
+    }
+
+    /********** Normal text paragraphs **********/
+    .content {
+        max-width: 350px;
+
+    }
+    .content p{
+        margin-top: 10%;
+    }
+
+    .explainer{
+        position: relative;
+        background-color: rgb(255, 154, 154);
+        border-radius: 1%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .explainer #police{
+        position: absolute;
+        max-width: 10%;
+        top: 15%;
+        left: 10%;
+        opacity: 0;
+        transition: opacity 0.3s;
+        
+    }
+
+    .explainer > img:nth-of-type(2){
+        position: absolute;
+        max-width: 5%;
+        top: 33%;
+        left: 13%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .explainer > img:nth-of-type(3){
+        position: absolute;
+        max-width: 10%;
+        top: 45%;
+        left: 9%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .explainer > img:nth-of-type(4){
+        position: absolute;
+        max-width: 5%;
+        top: 49%;
+        left: 30%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+
+    #explainer > img:nth-of-type(5){
+        position: absolute;
+        max-width: 10%;
+        top: 45%;
+        left: 44%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    #explainer > img:nth-of-type(6){
+        position: absolute;
+        max-width: 10%;
+        top: 70%;
+        left: 28%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    #explainer > img:nth-of-type(7){
+        position: absolute;
+        max-width: 6%;
+        top: 60%;
+        left: 30%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .fade-in {
+        opacity: 1;
+    }
+    /*****  INTERACTIVES  **************/
+
+    .wrapper {
+        height: 100vh;
+        position:fixed;
+        width: 100%;
+
+    }
+
+    .graphic {
+        background-color: white;
+        width: 100%; /*Makes the box-grid 70% of the 100vh wrapper*/
+        text-align: center;
+        text-transform: translate(-50%, -50%);
+        height: 75vh;
+        justify-content: space-around;
+        margin-top: 100px;
+    }
+
+    .tooltip {
+        background-color: #DE1E3D;
+        padding: 5.5px;
+        height: 1px;
+        margin-left: 1.5px;
+        margin-right: 1.5px;
+        margin-top: 1.5px;
+        border-radius: 15%;
+        vertical-align: bottom;
+     }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+
+    #graphic-main-boxes .tooltip{
+        padding: 8px;
+        margin-top:3px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .highlight-minor{
+        background-color: pink;
+    }
+
+    .highlight-rules{
+        background-color:yellowgreen;
+    }
+
+    .highlight-serious{
+        background-color:slategray;
+    }
+    /*
+    .breakdown-wrapper{
+        height:100%;
+        display:none;
+
+    }
+
+    .breakdown-div{
+        font-weight: bolder;
+        text-transform: uppercase;
+        height: 100%;
+        width:32%;
+        display: inline-block;
+        background-color: rgb(123, 189, 206);
+        border-radius: 2%;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .breakdown-header{
+        margin-top: 10px;
+        margin-bottom:20px;
+    }
+
+    .bk {
+        position: absolute;
+        bottom: 5%;
+        margin-left:2%;
+        margin-right:2%
+    }
+
+    .breakdown-div div.tooltip{
+        padding: 8px;
+        vertical-align: text-bottom;
+    }
+    */
+
+    .category {
+        height: 45px;
+        width: 100%;
+        display: flex;
+    }
+
+    .category-header{
+        width: 20%;
+        float: left;
+    }
+
+    .category-data{
+        text-align: left;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    #EF .tooltip{
+        background-color:rgb(220, 5, 50);
+    }
+
+    #dwi .tooltip{
+        background-color:rgb(220, 25, 75);
+    }
+
+    #lying .tooltip{
+        background-color: rgb(220, 50, 100);
+    }
+    #firearm .tooltip{
+        background-color: rgb(220, 75, 125);
+    }
+    #domestic .tooltip{
+        background-color: rgb(220, 100, 150);
+    }
+    #FADO .tooltip{
+        background-color: rgb(220, 152, 189);
+    }
+    #offduty .tooltip{
+        background-color: rgb(220, 150, 200);
+    }
+    #command .tooltip{
+        background-color: rgb(220, 175, 225);
+    }
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 300px;
+        color: #fff;
+        text-align: center;
+        padding: 1px 0;
+        border-radius: 6px;
+    
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .graphic .tooltip:hover {
+        background-color: lightskyblue; /* old hover effect, maybe dump?*/
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .caption {
+        margin-bottom: 30px;
+        padding: 10px;
+        border-radius: 1%;
+    }
+
+    .center{
+        text-align: center;
+    }
+
+    /********* Scroll Spy *************/
+    .scroll-spy{
+        position: absolute;
+        margin-top: 0vh;
+        width: 100vw;
+    }
+
+    .scroll-spy div{
+        position: relative;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 100vh;
+        color: white;
+        background-color: lightslategray;  /*These are styles for the font in the gray scrolling boxes*/
+        opacity: .98;
+        border-radius: 2%;
+        max-height: 40vh;
+    }
+
+    .scroll-spy div p{
+        text-align: center;
+        padding: 5%;
+    }
+    
+    body > div.scroll-spy > div.scroll-text.scroll-spy-reset{
+        height: 0;
+        background-color: white;
+    }
+
+    body > div.scroll-spy > div.scroll-spy-explainer{
+        margin-left: 65%;
+    }
+
+    #caption10{
+        margin-bottom: 300px;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;   
+    }
+    
+
+    .key {
+        background-color: lightgrey;
+        max-width: 30px;
+        position: absolute;
+        top:15%;
+        border-radius: 2%;
+        display: none;
+    }
+
+    .key p{
+        font-size: 2em;
+        max-width: 10px;
+        padding: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .bullet.active {
+        color: pink;
+
+    }
+
+    /********** Database Styles *******/
+
+    .table-title{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .database {
+        background-color: white;
+        border-radius: .2%;
+        margin-bottom: 20%;
+    }
+
+    .react-table {
+        color: black;
+        overflow: scroll;
+        height: 500px;
+        font-size: 11px;
+    }
+
+    .react-table thead{
+        background-color: lightgray;
+        text-align: center;
+    }
+
+    .react-table tr{
+        max-height: 20px;
+    }
+
+    .react-table form {
+        text-align: center;
+        margin: 5%;
+    }
+    .react-table form input {
+        width: 150px;
+    }
+
+    .react-table table {
+        padding: 5px;
+    }
+    
+}
+
+
+
+
+/********** Database Styles 
+
+.table-title{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 1.2em;
+}
+.database {
+    background-color: white;
+    border-radius: .2%;
+    margin: 10%;
+}
+
+.react-table {
+    color: black;
+    overflow: scroll;
+    height: 500px;
+    font-size: 11px;
+}
+
+.react-table thead{
+    background-color: lightgray;
+    text-align: center;
+}
+
+.react-table tr{
+    max-height: 20px;
+}
+
+.react-table form {
+    text-align: center;
+    margin: 5%;
+}
+.react-table form input {
+    width: 150px;
+}
+
+.react-table table {
+    padding: 5px;
+}*
+
+
+
+
+/********* TOOLTIPS ***************/
+
+    /* Tooltip container 
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    
+    /* Tooltip text 
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 300px;
+        color: #fff;
+        text-align: center;
+        padding: 1px 0;
+        border-radius: 6px;
+    
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+    
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+    }*/
