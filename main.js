@@ -84,18 +84,7 @@ function hideIntro(){
 	hideElement('scrolltobegin');
 	hideElement('title-hero');
 };
-/*
-function moveBullet(counter){
-	let bullets = document.getElementsByClassName('bullet');
-	for (var i = 0; i < bullets.length; i++) {
-		bullets[i].style.color = 'black'; //color the inactive bullets
-	 }
 
-	//lights up next bullet//
-
-	bullets[counter].style.color = 'crimson'; //color the active bullet	removeElement("dwi-category")
-
-};*/
 
 function hideElement(id){
 	document.getElementById(id).style.display = 'none';
